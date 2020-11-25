@@ -77,7 +77,7 @@ curl http://localhost/demo1
 ```
 If running on minikube, then follow the article [here](https://istio.io/latest/docs/setup/getting-started/#determining-the-ingress-ip-and-ports) to create GATEWAY_URL environment variable. Then issue the below command:
 ```
-curl http://GATEWAY_URL/demo1
+curl http://$GATEWAY_URL/demo1
 ```
 Trigger 2 or 3 requests using the above commands and issue the below command to open Jaeger Dashboard and analyze traces:
 ```
