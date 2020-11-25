@@ -35,7 +35,7 @@ Or
 ```
 docker build -t <project-name>:<version> .
 ```
-Note: Replace <project-name> and version with _artifactId_ and _version_ from the respective pom.xml files.
+Note: Replace project-name and version with _artifactId_ and _version_ from the respective pom.xml files.
 
 ### Creating Kubernetes Resources
 From the project root folder, issue the below command:
