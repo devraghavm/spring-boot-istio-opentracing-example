@@ -1,4 +1,5 @@
 #Spring Boot API With Istio Service Mesh And Open Tracing (Jaeger) Example
+
 Sample project to demonstrate open tracing on kubernetes using Istio Sidecar and Jaeger. It mimics the communication between 2 Spring Boot API's and Jaeger will be collecting traces upon subsequent requests.
 
 Prerequisites:
@@ -26,6 +27,7 @@ Prerequisites:
       ```
     
 ###Building Docker Images:
+
 The project is a multi-module project, inorder for you to test the opentracing, we need to build 2 docker images each by navigation into the respective module folder.
 Issue the following command:
 ```
@@ -38,6 +40,7 @@ docker build -t <project-name>:<version> .
 Note: Replace <project-name> and version with _artifactId_ and _version_ from the respective pom.xml files.
 
 ###Creating Kubernetes Resources
+
 From the project root folder, issue the below command:
 ```
 kubectl apply -f k8s
@@ -71,6 +74,7 @@ kubectl get destinationrule.networking.istio.io
 kubectl describe svc istio-ingressgateway -n istio-system
 ```
 ###Testing Opentracing
+
 If running on Docker Deskop built-in Kubernetes, issue the below command:
 ```
 curl http://localhost/demo1
@@ -87,6 +91,7 @@ That should open up a Jaeger dashboard in a browser window. You can search and a
 
 Happy Learning!!!
 ###References
+
 - https://blog.malathi.dev/2020/08/14/spring-boot-jaeger-istio.html
 - https://piotrminkowski.com/2020/06/01/service-mesh-on-kubernetes-with-istio-and-spring-boot/
 - https://gist.github.com/stevenc81/2c6840784c6223cdbd62cdd1563a4811
